@@ -1,16 +1,5 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: nazar
-  Date: 07.05.2023
-  Time: 00:05
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
-</html>
+<%@ page language="java" contentType="text/html" pageEncoding="UTF-8"%>
+<header>
+    <a href="/"><img alt="Логотип" id="top-image" src="images/logo.png"></a></div>
+    <div id="user-panel"><h1>Система учета мастеров и услуг</h1></div>
+</header>
