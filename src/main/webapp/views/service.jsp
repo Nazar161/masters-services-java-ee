@@ -1,26 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
-<%@ taglib prefix="fmt" uri="jakarta.tags.fmt" %>
-<%@ page import="domain.Service" %>
-<%@ page import="domain.Master" %>
-<%
-    Master m1 = new Master(1l, "Казаков Авраам Юрьевич", "Сантехник", "89067821112");
-    Master m2 = new Master(2l, "Васильев Степан Гордеевич", "Мастер стиральных машин", "89280984590");
-    Master m3 = new Master(3l, "Фадеев Адриан Иванович", "Плиточник", "89609126545");
-    Master[] masters = new Master[]{m1, m2, m3};
-    pageContext.setAttribute("masters", masters);
-
-    Service s1 = new Service(1L, "Установка ванны", (float)3000, (float)2, 1L, m1);
-    Service s2 = new Service(2L, "Замена смесителя", (float)800, (float)0.5, 1L, m1);
-    Service s3 = new Service(3L, "Ремонт подшипников", (float)1500, (float)1.5, 2L, m2);
-    Service s4 = new Service(4L, "Ремонт блока управлени", (float)2400, (float)1.5, 2L, m2);
-    Service s5 = new Service(5L, "Укладка плитки", (float)5000, (float)4, 3L, m3);
-    Service s6 = new Service(6L, "Резка плитки", (float)4500, (float)3.5, 3L, m3);
-
-    Service[] services = new Service[]{s1, s2, s3, s4, s5, s6};
-    pageContext.setAttribute("services", services);
-%>
-
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="css/style.css">

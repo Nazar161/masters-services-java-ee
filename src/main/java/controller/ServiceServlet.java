@@ -1,5 +1,9 @@
 package controller;
 
+import dao.ConnectionProperty;
+import dao.EmpConnBuilder;
+import domain.Master;
+import domain.Service;
 import jakarta.servlet.Servlet;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -7,23 +11,92 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 
 @WebServlet("/services")
 public class ServiceServlet extends HttpServlet implements Servlet {
     private static final long serialVersionUID = 1L;
 
-    public ServiceServlet() {
-        super();
+    ConnectionProperty prop;
+    String select_all_service = "SELECT id, title, price, duration, master_id FROM service";
+    String select_all_master = "SELECT id, full_name, post, phone FROM master";
+    ArrayList<Master> masters = new ArrayList<>();
+    ArrayList<Service> services = new ArrayList<>();
+
+    String userPath;
+
+    public ServiceServlet() throws FileNotFoundException, IOException {
+        prop = new ConnectionProperty();
+    }
+
+    private Master FindById(Long id, ArrayList<Master> masters) {
+        if (masters != null) {
+            for (Master m : masters) {
+                if ((m.getId()).equals(id)) {
+                    return m;
+                }
+            }
+        } else {
+            return null;
+        }
+
+        return null;
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
+        EmpConnBuilder builder = new EmpConnBuilder();
+        try (Connection conn = builder.getConnection()) {
+            // Загрузка всех мастеров
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(select_all_master);
+            if (rs != null) {
+                masters.clear();
+                while (rs.next()) {
+                    masters.add(new Master(
+                            rs.getLong("id"),
+                            rs.getString("full_name"),
+                            rs.getString("post"),
+                            rs.getString("phone")));
+                }
+                rs.close();
+                request.setAttribute("masters", masters);
+            } else {
+                System.out.println("Ошибка загрузки master");
+            }
 
-        String userPath = request.getServletPath();
+            // Загрузка всех услуг
+            long id;
+            stmt = conn.createStatement();
+            rs = stmt.executeQuery(select_all_service);
+            if (rs != null) {
+                services.clear();
+                while (rs.next()) {
+                    id = rs.getLong("master_id");
+                    services.add(new Service(
+                            rs.getLong("id"),
+                            rs.getString("title"),
+                            rs.getFloat("price"),
+                            rs.getFloat("duration"),
+                            id,
+                            FindById(id, masters)
+                    ));
+                }
+                rs.close();
+                request.setAttribute("services", services);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
+        userPath = request.getServletPath();
         if ("/services".equals(userPath)) {
             request.getRequestDispatcher("/views/service.jsp").forward(request, response);
         }

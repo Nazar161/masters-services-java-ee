@@ -1,14 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
-<%@ page import="domain.Master" %>
-
-<%
-    Master m1 = new Master(1l, "Казаков Авраам Юрьевич", "Сантехник", "89067821112");
-    Master m2 = new Master(2l, "Васильев Степан Гордеевич", "Мастер по ремонту стиральных машин", "89280984590");
-    Master m3 = new Master(3l, "Фадеев Адриан Иванович", "Плиточник", "89609126545");
-    Master[] masters = new Master[]{m1, m2, m3};
-    pageContext.setAttribute("masters", masters);
-%>
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="css/style.css">
