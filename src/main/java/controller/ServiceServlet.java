@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(value = "/ServiceServlet")
+@WebServlet("/services")
 public class ServiceServlet extends HttpServlet implements Servlet {
     private static final long serialVersionUID = 1L;
 
@@ -21,11 +21,11 @@ public class ServiceServlet extends HttpServlet implements Servlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
-        PrintWriter writer = response.getWriter();
-        try {
-            writer.println("<h2>Привет ServiceServlet</h2>");
-        } finally {
-            writer.close();
+
+        String userPath = request.getServletPath();
+
+        if ("/services".equals(userPath)) {
+            request.getRequestDispatcher("/views/service.jsp").forward(request, response);
         }
     }
 

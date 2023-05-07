@@ -63,6 +63,6 @@ public class Master {
 
     @Override
     public String toString() {
-        return "Master {" + "Id = " + id + ", FullName = " + fullName + ", Post = " + post + ", Phone = " + phone + "}";
+        return fullName + "(" + post + ") " + phone;
     }
 }

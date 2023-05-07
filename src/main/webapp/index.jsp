@@ -10,8 +10,8 @@
 <div id="main" class="container">
     <h2>Функции системы</h2>
     <ul>
-        <li><a href="#">Мастера</a>
-        <li><a href="#">Услуги</a>
+        <li><a href="masters">Мастера</a>
+        <li><a href="services">Услуги</a>
     </ul>
 </div>
 <jsp:include page="./jspf/footer.jsp"/>
