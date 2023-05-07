@@ -8,10 +8,10 @@ public class Service {
     private String title;
 
     // Стоимость услуги
-    private Long price;
+    private Float price;
 
     // Продолжиткльность услуги
-    private Long duration;
+    private Float duration;
 
     // Внешний ключ - ссылка на сущность Master
     private Long idMaster;
@@ -22,14 +22,14 @@ public class Service {
     public Service() {
     }
 
-    public Service(String title, Long price, Long duration, Master master) {
+    public Service(String title, Float price, Float duration, Master master) {
         this.title = title;
         this.price = price;
         this.duration = duration;
         this.master = master;
     }
 
-    public Service(String title, Long price, Long duration, Long idMaster, Master master) {
+    public Service(String title, Float price, Float duration, Long idMaster, Master master) {
         this.title = title;
         this.price = price;
         this.duration = duration;
@@ -37,7 +37,7 @@ public class Service {
         this.master = master;
     }
 
-    public Service(Long id, String title, Long price, Long duration, Long idMaster, Master master) {
+    public Service(Long id, String title, Float price, Float duration, Long idMaster, Master master) {
         this.id = id;
         this.title = title;
         this.price = price;
@@ -62,19 +62,19 @@ public class Service {
         this.title = title;
     }
 
-    public Long getPrice() {
+    public Float getPrice() {
         return price;
     }
 
-    public void setPrice(Long price) {
+    public void setPrice(Float price) {
         this.price = price;
     }
 
-    public Long getDuration() {
+    public Float getDuration() {
         return duration;
     }
 
-    public void setDuration(Long duration) {
+    public void setDuration(Float duration) {
         this.duration = duration;
     }
 
