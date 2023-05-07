@@ -64,3 +64,28 @@ https://github.com/Nazar161/masters-services-java-ee/blob/a3b4a85cc19d28b619e786
 <img width="1436" alt="image" src="https://user-images.githubusercontent.com/49819458/236684122-ec96247b-e65f-4ddc-88a6-845d93ca1746.png">
 
 </Details>
+
+---
+Лабораторная №4 (dev4)
+---
+
+Ссылка на ветку — https://github.com/Nazar161/masters-services-java-ee/tree/dev4
+
+Подключение веб приложения к базе данных
+<Details><Summary>SQL скрипты для добавления таблиц и данных в PostgreSQL</Summary>
+
+![image](https://user-images.githubusercontent.com/49819458/236699332-42f5c542-7091-4282-81d3-c6e345b8d6c9.png)
+![image](https://user-images.githubusercontent.com/49819458/236699345-ac70df48-16f0-46c6-ab04-ee5246ef12bd.png)
+
+</Details>
+
+Теперь в [master.jsp](https://github.com/Nazar161/masters-services-java-ee/blob/dev4/src/main/webapp/views/master.jsp) и в [service.jsp](https://github.com/Nazar161/masters-services-java-ee/blob/dev4/src/main/webapp/views/service.jsp) нет моковых данных, все данные приходят из БД
+<Details><Summary>сведения</Summary>
+
+<img width="616" alt="image" src="https://user-images.githubusercontent.com/49819458/236705532-515c246e-ee7b-4541-9585-2fee2f667a66.png">
+
+<img width="1407" alt="image" src="https://user-images.githubusercontent.com/49819458/236705587-bd412809-ca4a-4b24-abb7-fd940913a79b.png">
+
+<img width="1401" alt="image" src="https://user-images.githubusercontent.com/49819458/236705570-927220ad-b340-418b-b9fe-193cc383bbbd.png">
+
+</Details>
