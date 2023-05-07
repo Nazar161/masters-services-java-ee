@@ -10,12 +10,12 @@
     Master[] masters = new Master[]{m1, m2, m3};
     pageContext.setAttribute("masters", masters);
 
-    Service s1 = new Service(1L, "Установка ванны", 3000L, 2L, 1L, m1);
-    Service s2 = new Service(2L, "Замена смесителя", 800L, (long)0.5, 1L, m1);
-    Service s3 = new Service(3L, "Ремонт подшипников", 1500L, (long)1.5, 2L, m2);
-    Service s4 = new Service(4L, "Ремонт блока управлени", 2400L, (long)1.5, 2L, m2);
-    Service s5 = new Service(5L, "Укладка плитки", 5000L, 4L, 3L, m3);
-    Service s6 = new Service(6L, "Резка плитки", 4500L, (long)3.5, 3L, m3);
+    Service s1 = new Service(1L, "Установка ванны", (float)3000, (float)2, 1L, m1);
+    Service s2 = new Service(2L, "Замена смесителя", (float)800, (float)0.5, 1L, m1);
+    Service s3 = new Service(3L, "Ремонт подшипников", (float)1500, (float)1.5, 2L, m2);
+    Service s4 = new Service(4L, "Ремонт блока управлени", (float)2400, (float)1.5, 2L, m2);
+    Service s5 = new Service(5L, "Укладка плитки", (float)5000, (float)4, 3L, m3);
+    Service s6 = new Service(6L, "Резка плитки", (float)4500, (float)3.5, 3L, m3);
 
     Service[] services = new Service[]{s1, s2, s3, s4, s5, s6};
     pageContext.setAttribute("services", services);
@@ -49,7 +49,7 @@
                         <tr>
                             <td>${service.getId()}</td>
                             <td>${service.getTitle()}</td>
-                            <td><fmt:formatNumber value="${service.getDuration()}" minFractionDigits="1" maxFractionDigits="1"/>ч.</td>
+                            <td>${service.getDuration()}ч.</td>
                             <td>${service.getPrice()} руб.</td>
                             <td>${service.getMaster()}</td>
                         </tr>
