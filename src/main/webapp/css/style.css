@@ -1,0 +1,48 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+header .container {
+    height: 150px;
+    background: #75eea5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    padding: 0 20px;
+}
+
+#main {
+    flex: 1;
+}
+
+#top-image {
+    height: 130px;
+    width: 130px;
+    background: #6699ff;
+    border-radius: 5px;
+}
+
+#user-panel {
+    padding: 10px;
+    background: #9999ff;
+    border-radius: 5px;
+}
+
+footer {
+    height: 80px;
+    background: #6184aa;
+}
+
+footer div {
+    font-weight: bold;
+}
+
+footer span {
+    margin-right: 15px;
+}
