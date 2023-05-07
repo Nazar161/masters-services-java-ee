@@ -46,3 +46,21 @@ https://github.com/Nazar161/masters-services-java-ee/blob/a3b4a85cc19d28b619e786
 https://github.com/Nazar161/masters-services-java-ee/blob/a3b4a85cc19d28b619e786c43b6a32adbb533096/src/main/java/domain/Service.java#L1-L101
 
 </Details>
+
+---
+Лабораторная №3 (dev3)
+---
+
+Ссылка на ветку — https://github.com/Nazar161/masters-services-java-ee/tree/dev3
+
+Создание представлений
+<Details><Summary>Старница мастеров</Summary>
+
+<img width="1438" alt="image" src="https://user-images.githubusercontent.com/49819458/236684079-1cc6b2bb-79b2-41ca-8b49-1c5157a670d7.png">
+</Details>
+
+<Details><Summary>Старница услуг</Summary>
+
+<img width="1436" alt="image" src="https://user-images.githubusercontent.com/49819458/236684122-ec96247b-e65f-4ddc-88a6-845d93ca1746.png">
+
+</Details>
