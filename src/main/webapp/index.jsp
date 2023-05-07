@@ -7,7 +7,7 @@
     <title>Главная страница</title></head>
 <body>
 <jsp:include page="./jspf/header.jsp"/>
-<div id="main">
+<div id="main" class="container">
     <h2>Функции системы</h2>
     <ul>
         <li><a href="#">Мастера</a>

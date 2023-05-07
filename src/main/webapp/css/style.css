@@ -1,28 +1,34 @@
 body {
-    width: 96%;
-    margin-left: 2%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 }
 
-header {
+header .container {
     height: 150px;
-    border-radius: 5px;
     background: #75eea5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    padding: 0 20px;
+}
+
+#main {
+    flex: 1;
 }
 
 #top-image {
     height: 130px;
     width: 130px;
-    top: 20px;
     background: #6699ff;
-    position: absolute;
-    left: 5%;
     border-radius: 5px;
 }
 
 #user-panel {
-    position: absolute;
-    top: 20px;
-    right: 5%;
     padding: 10px;
     background: #9999ff;
     border-radius: 5px;
@@ -31,14 +37,10 @@ header {
 footer {
     height: 80px;
     background: #6184aa;
-    border-radius: 0px 0px 5px 5px;
-    vertical-align: central;
 }
 
 footer div {
-    padding-top: 35px;
     font-weight: bold;
-    padding-left: 10px;
 }
 
 footer span {
