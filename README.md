@@ -89,3 +89,37 @@ https://github.com/Nazar161/masters-services-java-ee/blob/a3b4a85cc19d28b619e786
 <img width="1401" alt="image" src="https://user-images.githubusercontent.com/49819458/236705570-927220ad-b340-418b-b9fe-193cc383bbbd.png">
 
 </Details>
+
+---
+Лабораторная №5 (dev5)
+---
+
+Ссылка на ветку — https://github.com/Nazar161/masters-services-java-ee/tree/dev5
+
+Создание новых записей в базе данных
+<Details><Summary>Создание новой записи в таблице мастеров</Summary>
+
+с помощью формы для добавления мастера, была создана новая запись в БД
+`33 Иванов Иван Иванович Сантехник 89897651281`
+
+<img width="1406" alt="image" src="https://user-images.githubusercontent.com/49819458/236758782-a946b6d6-8e06-4d4f-ab01-2be5032d1067.png">
+</Details>
+
+<Details><Summary>Создание новой записи в таблице услуг</Summary>
+
+<img width="1412" alt="Снимок экрана 2023-05-08 в 09 36 43" src="https://user-images.githubusercontent.com/49819458/236759232-cee76c75-a340-4f2c-a3f9-8716ce3113ca.png">
+
+после нажатия кнопки Добавить, в таблице появляется новая запись услуги с id 8
+<img width="1406" alt="Снимок экрана 2023-05-08 в 09 37 01" src="https://user-images.githubusercontent.com/49819458/236759333-9e69e8fe-062d-4b4a-b2cc-e053a142f00f.png">
+
+</Details>
+
+<Details><Summary>переопределенный метод doPost в классе MasterServlet </Summary>
+
+https://github.com/Nazar161/masters-services-java-ee/blob/f009132ec4a75f4a1ab4aaa79b693693cb301d49/src/main/java/controller/MasterServlet.java#L70-L94
+</Details>
+
+<Details><Summary>переопределенный метод doPost в классе ServiceServlet </Summary>
+
+https://github.com/Nazar161/masters-services-java-ee/blob/f009132ec4a75f4a1ab4aaa79b693693cb301d49/src/main/java/controller/ServiceServlet.java#L103-L126
+</Details>
