@@ -13,10 +13,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 @WebServlet("/services")
@@ -26,6 +23,7 @@ public class ServiceServlet extends HttpServlet implements Servlet {
     ConnectionProperty prop;
     String select_all_service = "SELECT id, title, price, duration, master_id FROM service";
     String select_all_master = "SELECT id, full_name, post, phone FROM master";
+    String insert_service = "INSERT INTO service(master_id, title, price, duration) VALUES(?, ?, ?, ?)";
     ArrayList<Master> masters = new ArrayList<>();
     ArrayList<Service> services = new ArrayList<>();
 
@@ -104,6 +102,26 @@ public class ServiceServlet extends HttpServlet implements Servlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        EmpConnBuilder builder = new EmpConnBuilder();
+        try(Connection conn = builder.getConnection()){
+            String title = request.getParameter("title");
+            Float duration = Float.parseFloat(request.getParameter("duration"));
+            Float price = Float.parseFloat(request.getParameter("price"));
+            Long masterId = Long.parseLong(request.getParameter("master"));
+
+            PreparedStatement preparedStatement = conn.prepareStatement(insert_service);
+            preparedStatement.setLong(1, masterId);
+            preparedStatement.setString(2, title);
+            preparedStatement.setFloat(3, price);
+            preparedStatement.setFloat(4, duration);
+
+            int rows = preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            getServletContext().getRequestDispatcher("/views/service.jsp").forward(request, response);
+            throw new RuntimeException(e);
+        }
+
+
         doGet(request, response);
     }
 }

@@ -42,18 +42,18 @@
                     <form method="POST" action="">
                         <p>
                             <label for="fullName">ФИО</label>
-                            <input type="text" name="fullName" id="fullName"/>
+                            <input type="text" name="fullName" id="fullName" required/>
                         </p>
                         <p>
                             <label for="post">Должность</label>
-                            <input type="text" name="post" id="post"/>
+                            <input type="text" name="post" id="post" required/>
                         </p>
                         <p>
                             <label for="phone">Номер тел.</label>
-                            <input type="text" name="phone" id="phone"/>
+                            <input type="text" name="phone" id="phone" required/>
                         </p>
+                        <p><button type="submit">Добавить</button></p>
                     </form>
-                    <p><button type="submit">Добавить</button></p>
                 </div>
             </article>
         </section>

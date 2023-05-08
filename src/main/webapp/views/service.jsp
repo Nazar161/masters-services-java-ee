@@ -44,31 +44,29 @@
                     <form method="POST" action="">
                         <p>
                             <label for="title">Название</label>
-                            <input type="text" name="title" id="title"/>
+                            <input type="text" name="title" id="title" required/>
                         </p>
                         <p>
                             <label for="duration">Продолжительность</label>
-                            <input type="number" step="0.5" name="duration" id="duration" style="width: 100px"/>
+                            <input type="number" step="0.5" name="duration" id="duration" style="width: 100px" required/>
                         </p>
                         <p>
                             <label for="price">Стоимость</label>
-                            <input type="number" step="50" name="price" id="price"/>
-                        </p>
-                        <p>
-                            <label for="phone">Номер тел.</label>
-                            <input type="text" name="phone" id="phone"/>
+                            <input type="number" step="50" name="price" id="price" required/>
                         </p>
                         <p>
                             <label for="master">Мастер</label>
-                            <select name="master" id="master" style="width: 180px">
+                            <select name="master" id="master" style="width: 180px" required>
                                 <option disabled>Выберите Мастера</option>
                                 <c:forEach var="master" items="${masters}">
-                                    <option value="${master}">${master.getFullName()}(${master.getPost()})</option>
+                                    <option value="${master.getId()}">
+                                        <c:out value="${master.getFullName()}(${master.getPost()})"></c:out>
+                                    </option>
                                 </c:forEach>
                             </select>
                         </p>
+                        <p><button type="submit">Добавить</button></p>
                     </form>
-                    <p><button type="submit">Добавить</button></p>
                 </div>
             </article>
         </section>
