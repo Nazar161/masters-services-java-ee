@@ -6,7 +6,7 @@
 </Details>
 
 ---
-Лабораторная №1 (dev1)
+Лабораторная №9 (dev1)
 ---
 
 Ссылка на ветку — https://github.com/Nazar161/masters-services-java-ee/tree/dev1
@@ -30,7 +30,7 @@
 </Details>
 
 ---
-Лабораторная №2 (dev2)
+Лабораторная №10 (dev2)
 ---
 
 Ссылка на ветку — https://github.com/Nazar161/masters-services-java-ee/tree/dev2
@@ -48,7 +48,7 @@ https://github.com/Nazar161/masters-services-java-ee/blob/a3b4a85cc19d28b619e786
 </Details>
 
 ---
-Лабораторная №3 (dev3)
+Лабораторная №11 (dev3)
 ---
 
 Ссылка на ветку — https://github.com/Nazar161/masters-services-java-ee/tree/dev3
@@ -66,7 +66,7 @@ https://github.com/Nazar161/masters-services-java-ee/blob/a3b4a85cc19d28b619e786
 </Details>
 
 ---
-Лабораторная №4 (dev4)
+Лабораторная №12 (dev4)
 ---
 
 Ссылка на ветку — https://github.com/Nazar161/masters-services-java-ee/tree/dev4
@@ -91,7 +91,7 @@ https://github.com/Nazar161/masters-services-java-ee/blob/a3b4a85cc19d28b619e786
 </Details>
 
 ---
-Лабораторная №5 (dev5)
+Лабораторная №13 (dev5)
 ---
 
 Ссылка на ветку — https://github.com/Nazar161/masters-services-java-ee/tree/dev5
