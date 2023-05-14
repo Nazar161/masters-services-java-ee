@@ -123,3 +123,77 @@ https://github.com/Nazar161/masters-services-java-ee/blob/f009132ec4a75f4a1ab4aa
 
 https://github.com/Nazar161/masters-services-java-ee/blob/f009132ec4a75f4a1ab4aaa79b693693cb301d49/src/main/java/controller/ServiceServlet.java#L103-L126
 </Details>
+
+---
+Лабораторная №14 (dev6)
+---
+
+Ссылка на ветку — https://github.com/Nazar161/masters-services-java-ee/tree/dev6
+
+Редактирование и удаление записей в базе данных
+В проект был добавен Bootstrap для стилизации элементов на странице
+<Details><Summary>Измененные страницы мастеров и сервисов(добавились кнопки редактирования и удаления записей)</Summary>
+
+<img width="1437" alt="image" src="https://github.com/Nazar161/masters-services-java-ee/assets/49819458/38506542-80e1-4cd1-a8b8-2a479bd6e1bb">
+
+<img width="1438" alt="image" src="https://github.com/Nazar161/masters-services-java-ee/assets/49819458/f6643e7c-828e-44d3-984c-26749bd5656e">
+
+</Details>
+
+<Details><Summary>Страница редактирования мастера</Summary>
+
+<img width="1438" alt="image" src="https://github.com/Nazar161/masters-services-java-ee/assets/49819458/e1ac56f4-6381-4c58-b38e-ed1cb3320829">
+
+Для примера отредактируем номер телефона последнего мастера с кодом 10 на 89895555555
+
+состояние БД до редактирования:
+<img width="594" alt="image" src="https://github.com/Nazar161/masters-services-java-ee/assets/49819458/24c2fc8d-7ef1-4b20-bc5f-9a8e2258241e">
+
+состояние БД после редактирования:
+<img width="621" alt="image" src="https://github.com/Nazar161/masters-services-java-ee/assets/49819458/d5508a16-fd5c-4ffb-96fb-8973091f747c">
+
+<img width="1437" alt="image" src="https://github.com/Nazar161/masters-services-java-ee/assets/49819458/39b77936-6c42-4ae2-8c91-46c134c2e81a">
+
+</Details>
+
+<Details><Summary>Страница удаление мастера</Summary>
+
+<img width="1436" alt="image" src="https://github.com/Nazar161/masters-services-java-ee/assets/49819458/d5c5ceae-2dc3-44c2-af16-476445cd1024">
+
+состояние БД до удаления записи:
+<img width="630" alt="image" src="https://github.com/Nazar161/masters-services-java-ee/assets/49819458/ce45c008-e37a-4b61-b0b2-85e2a15dcbae">
+
+состояние БД после удаления записи:
+
+<img width="634" alt="image" src="https://github.com/Nazar161/masters-services-java-ee/assets/49819458/cc2af32f-0139-4987-976d-b66e7b979707">
+
+</Details>
+
+<Details><Summary>страница редактирования сервисов</Summary>
+<img width="1431" alt="image" src="https://github.com/Nazar161/masters-services-java-ee/assets/49819458/7a3fb0c5-adbf-4e63-bd12-cf6a50cf89f1">
+
+для примера поменяем цену сервиса с кодом 9 с 2250 на 1900
+состояние БД до редактирования:
+<img width="441" alt="image" src="https://github.com/Nazar161/masters-services-java-ee/assets/49819458/d276c4ad-fbc6-4ae5-bbf7-790b5be98377">
+
+состояние БД после редактирования:
+<img width="450" alt="image" src="https://github.com/Nazar161/masters-services-java-ee/assets/49819458/25c719dd-4fd9-4412-b2ca-d1c28348af0c">
+
+<img width="997" alt="image" src="https://github.com/Nazar161/masters-services-java-ee/assets/49819458/6552c139-4a50-4552-a2b5-d6f8ce594503">
+
+</Details>
+
+<Details><Summary>Страница удаления сервиса</Summary>
+
+<img width="1420" alt="image" src="https://github.com/Nazar161/masters-services-java-ee/assets/49819458/960db299-6e60-422a-a749-964772e28572">
+Удалим  последнюю тестовую услугу с кодом 10 
+
+состояние БД до удаления записи:
+<img width="447" alt="image" src="https://github.com/Nazar161/masters-services-java-ee/assets/49819458/f8d25690-5895-4e88-875f-f43c28a9ada9">
+
+состояние БД после удаления записи:
+<img width="449" alt="image" src="https://github.com/Nazar161/masters-services-java-ee/assets/49819458/ebd0b817-8e6f-4700-a872-c5a542ea1145">
+
+<img width="1016" alt="image" src="https://github.com/Nazar161/masters-services-java-ee/assets/49819458/ef3ca812-1336-413e-8a79-1e2d183fb114">
+
+</Details>
